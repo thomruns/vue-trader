@@ -5,5 +5,4 @@ export default [
   { id: 4, name: 'Twitter', price: 28.76 },
   { id: 5, name: 'Adobe', price: 261.44 },
   { id: 6, name: 'Nvidia', price: 276.22 }
-
 ]
