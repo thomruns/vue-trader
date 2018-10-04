@@ -3,8 +3,8 @@
     <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-title">
-          NAME
-          <small>(Price: PRICE)</small>
+          {{ stock.name }}
+          <small>(Price: {{ stock.price }})</small>
           </h3>
       </div>
       <div class="panel-body">
@@ -25,3 +25,9 @@
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    props: ['stock']
+  }
+</script>
