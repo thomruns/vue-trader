@@ -1,10 +1,10 @@
 <template>
   <div class="col-sm-6 col-md-4">
-    <div class="panel panel-success">
+    <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
           {{ stock.name }}
-          <small>(Price: US$ {{ Number.parseFloat(this.stock.price).toFixed(2)}} | Quantity: {{ stock.quantity}})</small>
+          <small>(Price: US$ {{ Number.parseFloat(this.stock.price).toFixed(2)}} | Qty Owned: {{ stock.quantity}})</small>
           </h3>
       </div>
       <div class="panel-body">
@@ -39,16 +39,17 @@
       }
     },
     methods: {
-      ...mapActions([
-        'sellStock'
-      ]),
+      ...mapActions({
+        placeSellOrder: 'sellStock'
+      }),
       sellStock() {
         const order = {
           stockId: this.stock.id,
           stockPrice: this.stock.price,
           quantity: this.quantity
         }
-        this.sellStock()
+        this.placeSellOrder(order)
+        this.quantity = 0
       }
     }
   }

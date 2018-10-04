@@ -21,7 +21,7 @@ const mutations = {
     if (record.quantity > quantity) {
       record.quantity -= quantity
     } else {
-      state.stocks.splice(state.stocks_p.indexOf(record), 1)
+      state.stocks.splice(state.stocks.indexOf(record), 1)
     }
     state.funds += stockPrice * quantity
   }
