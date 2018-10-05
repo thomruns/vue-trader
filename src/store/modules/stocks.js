@@ -17,6 +17,9 @@ const mutations = {
 }
 
 //what will we do with our stocks
+// buyStock = buy a stock
+// initStocks = load stocks
+// randomizeStocks = create new random stock prices
 const actions = {
   buyStock: ({ commit }, order) => {
     commit('BUY_STOCK', order)
