@@ -36,6 +36,7 @@
 </template>
 
 <script>
+  import axios from 'axios'
   import {mapActions} from 'vuex'
 
   export default {
@@ -63,6 +64,9 @@
           stocks: this.$store.getters.stocks
         }
         // this.$http.put('data.json', data)
+        axios.put('https://vuejs-stock-trader-e83ad.firebaseio.com/data.json',data)
+          .then(res => console.log(res))
+          .catch(error => console.log(error))
         console.log(data)
       }
     }
