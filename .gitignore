@@ -3,6 +3,7 @@ node_modules/
 dist/
 npm-debug.log
 yarn-error.log
+certs/
 
 # Editor directories and files
 .idea
@@ -11,3 +12,5 @@ yarn-error.log
 *.njsproj
 *.sln
 *.txt
+*.key
+*.cert

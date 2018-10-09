@@ -66,7 +66,7 @@
         }
         // this.$http.put('data.json', data)
         axios.put('', data)
-          .then(res => console.log(res))
+          // .then(res => console.log(res))
           .catch(error => console.log(error))
         //console.log(data)
       },

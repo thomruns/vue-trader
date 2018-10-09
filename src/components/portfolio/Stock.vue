@@ -4,7 +4,8 @@
       <div class="panel-heading">
         <h3 class="panel-title">
           {{ stock.name }}
-          <small>(Price: US$ {{ Number.parseFloat(this.stock.price).toFixed(2)}} | Qty Owned: {{ stock.quantity}})</small>
+          <small>(Price: US$ {{ Number.parseFloat(this.stock.price).toFixed(2)}} | Qty Owned: {{ stock.quantity}} | 
+            Value: {{ Number.parseFloat(portValue).toFixed(2) }})</small>
           </h3>
       </div>
       <div class="panel-body">
@@ -42,6 +43,9 @@
     computed: {
       insufficientQuantity() {
         return this.quantity > this.stock.quantity
+      },
+      portValue() {
+        return this.stock.quantity * this.stock.price
       }
     },
     methods: {

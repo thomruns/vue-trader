@@ -15,7 +15,7 @@ export const loadData = ({commit}) => {
         commit('SET_STOCKS', stocks)
         commit('SET_PORTFOLIO', portfolio)
       }
-      console.log(data)
-      console.log(res)
+      // console.log(data)
+      // console.log(res)
     })
 }

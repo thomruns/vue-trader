@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-stock v-for="(stock, id) in stocks" v-bind:key="id" :stock="stock"></app-stock>
-    <p>After making a purchase, choose Save Data.</p>
+    <p>After EACH purchase, choose Save Data.</p>
     <p>To finish the trading day, choose End Day.</p>
     <p>To load saved data, choose Load Data.</p>
   </div>

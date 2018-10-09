@@ -10,7 +10,7 @@ import store from './store/store'
 Vue.use(VueRouter)
 
 // Vue.use(VueResource)
-axios.defaults.baseURL = 'BASE_URL_HERE'
+axios.defaults.baseURL = 'BASE__URL__HERE'
 
 Vue.filter('currency', (value) => {
   return 'US$ ' + value.toLocaleString()
